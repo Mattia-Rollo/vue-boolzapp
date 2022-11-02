@@ -5,7 +5,7 @@ const contacts = [
     visible: true,
     messages: [
             {
-            date: '10/01/2020 15:30:55',
+            date: '202/01/10 15:30:55',
             message: 'Hai portato a spasso il cane?',
             status: 'sent'
             },
@@ -171,7 +171,7 @@ createApp({
     data() {
         return{
             textSearch: '',
-            date: DateTime.now().toLocaleString(),
+            date: DateTime.now().toLocaleString(DateTime.DATETIME_FULL ),
             text: '',
             activeIndex: 0,
             contacts
@@ -204,11 +204,12 @@ createApp({
 
 
 
-
+const dateL = contacts[0].messages[0].date
 // console.log(DateTime.now());
 
 const newDate = new Date(contacts[0].messages[0].date);
-// console.log(new Date());
+console.log(newDate);
 
-const now = DateTime.fromJSDate(newDate);
-console.log(DateTime.now().toString());
+
+const now = DateTime.fromJSDate(newDate);;
+console.log(now);
