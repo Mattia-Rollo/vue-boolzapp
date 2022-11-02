@@ -6,3 +6,6 @@ body {
 .icon-header {
     height: 60px;
 }
+.right {
+    background-image: url('../img/mine.jpg');
+}
