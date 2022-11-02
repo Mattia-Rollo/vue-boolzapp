@@ -3,6 +3,9 @@ body {
     background-size: 100vw 15vh;
     background-repeat: no-repeat;
 }
+main {
+    padding: 10px 70px;
+}
 .my-bg-white-header {
     background-color: #eaeaea;
 }
@@ -90,4 +93,15 @@ i {
 li:hover {
     background-color: rgba(209, 209, 209, 0.748);
     cursor: pointer;
+}
+.send {
+    background-color: green;
+    margin-left: auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+.recived {
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px
 }
