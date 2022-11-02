@@ -163,7 +163,7 @@ const contacts = [
 ]    
 
 
-
+let DateTime = luxon.DateTime;
 
 const { createApp } = Vue;
 
@@ -171,7 +171,7 @@ createApp({
     data() {
         return{
             textSearch: '',
-            date: null,
+            date: DateTime.now().toLocaleString(),
             text: '',
             activeIndex: 0,
             contacts
@@ -192,20 +192,20 @@ createApp({
         
         addMessage(obj){
             obj.messages.push({
+            date: this.date,
             message: this.text,
             status: 'received'})   
-        },
-        removeTask(i) {
-            this.toDosList.splice(i,1);
         }
     }
 }).mount('#app');
 
 
-let DateTime = luxon.DateTime;
+
 
 // console.log(DateTime.now());
 
+const newDate = new Date(contacts[0].messages[0].date);
+// console.log(new Date());
 
-const now = DateTime.fromISO("2017-05-15")
-console.log(now.toLocaleString({ year: 'numeric',month: 'long', day: 'numeric' }))
+const now = DateTime.fromJSDate(newDate);
+console.log(DateTime.now().toString());
