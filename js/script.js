@@ -175,6 +175,9 @@ createApp({
         }
     },
     computed: {
+        formatDate() {
+            
+        },
         filtered(){
             return this.hideCompleted 
              ? this.toDosList.filter((task) => task.done == false)

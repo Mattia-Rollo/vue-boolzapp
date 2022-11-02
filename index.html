@@ -79,7 +79,7 @@
                                     <span class="last-access last-message">{{person.messages[person.messages.length-1].message}}</span>
                                 </div>
                                 <!-- orario ultimo messaggio  -->
-                                <div class="top-0 ms-auto text-secondary text-end w-25"><span class="date-last-message">{{person.messages[0].date}}</span></div>
+                                <div class="top-0 ms-auto text-secondary text-end w-25"><span class="date-last-message">{{person.messages[person.messages.length-1].date}}</span></div>
                             </div>
                         </li>
                     </ul>
@@ -116,18 +116,15 @@
                     </div>
                     <!--############# contenuto della chat attiva #####################-->
                     <main >
-                        <div class="p-3 d-flex">
+                        <div v-for="message in contacts[activeIndex].messages"class="p-3 d-flex">
                         
-                            <div id="message" class="send position-relative">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, dignissimos!
+
+                            <div id="message" :class="message.status == 'sent' ? 'send' : 'recived'" class="position-relative">{{message.message}}
                                 <span class="date-message">12:00</span>
                             </div>
-                        </div>
-                        <div class="p-3 d-flex">
                         
-                            <div id="message" class="recived position-relative"><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui dolorum dolorem, nostrum totam officia cumque architecto quasi veritatis omnis. Cum fuga alias soluta quod ab quo qui ratione molestias voluptates.</span>
-                                <span class="date-message">12:00</span>
-                            </div>
                         </div>
+                    
                     </main>
                     <!-- footer della chat attiva con campo di input per inviare messaggi -->
                     
