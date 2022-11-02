@@ -194,7 +194,10 @@ createApp({
             obj.messages.push({
             date: this.date,
             message: this.text,
-            status: 'received'})   
+            status: 'received'})
+            setTimeout(()=>{
+                
+            },3000)   
         }
     }
 }).mount('#app');
