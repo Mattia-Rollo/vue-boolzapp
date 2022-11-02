@@ -27,7 +27,7 @@ const contacts = [
     visible: true,
     messages: [
             {
-            date: '20/03/2020 16:30:00',
+            date: '20-03-2020T16:30:00',
             message: 'Ciao come stai?',
             status: 'sent'
             },
@@ -170,6 +170,9 @@ const { createApp } = Vue;
 createApp({
     data() {
         return{
+            textSearch: '',
+            date: null,
+            text: '',
             activeIndex: 0,
             contacts
         }
@@ -179,29 +182,28 @@ createApp({
             
         },
         filtered(){
-            return this.hideCompleted 
-             ? this.toDosList.filter((task) => task.done == false)
-           : this.toDosList;
+            return this.textSearch != '' 
+            ? this.contacts.filter((obj) => obj.name.includes(this.textSearch))
+            : this.contacts;
              
            }
     },
     methods: {
         
-        addTask(){
-            if(this.newTask.text.length > 3){
-            
-            this.toDosList.unshift(this.newTask);
-            this.newTask = {
-                text: '',
-                done: false
-            };
-            this.hasError = false;
-
-        }else{
-            this.hasError = true; 
-        }},
+        addMessage(obj){
+            obj.messages.push({
+            message: this.text,
+            status: 'received'})   
+        },
         removeTask(i) {
             this.toDosList.splice(i,1);
         }
     }
 }).mount('#app');
+
+
+let DateTime = luxon.DateTime;
+// console.log(DateTime.now());
+
+const now = DateTime.fromISO("2017-05-15")
+console.log(now.toLocaleString({ year: 'numeric',month: 'long', day: 'numeric' }))
