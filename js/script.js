@@ -183,7 +183,7 @@ createApp({
         },
         filtered(){
             return this.textSearch != '' 
-            ? this.contacts.filter((obj) => obj.name.includes(this.textSearch))
+            ? this.contacts.filter((obj) => obj.name.toLowerCase().includes(this.textSearch.toLowerCase()))
             : this.contacts;
              
            }
