@@ -14,6 +14,7 @@
     <div id="app">
         <div class="container vh-100 p-3">
             <div class="container h-100 d-flex p-3">
+                <!--Lato sinistro lista chat aperte -->
                 <div class="left h-100 bg-light border-end border-1 border-dark">
                     
                     <div id="header-aside-left" class="icon-header my-bg-white-header d-flex justify-content-between align-items-center p-1">
@@ -33,7 +34,8 @@
                         </div>
 
                     </div>
-                    <div id="allert" class="p-2">
+                    <!--######## banner attivazione notifiche desktop ##########-->
+                    <div id="allert" class="p-3">
                         <div class="icon-profile d-flex align-content-center">
                             <div id="icon-bell" class="d-flex">
                                 <div class="m-auto rounded-circle bg-light square d-flex">
@@ -41,23 +43,29 @@
                                 </div>
                             </div>
                             <div id="notifications" class="ps-1 d-flex flex-column justify-content-center">
-                               <span id="name-user"class="">Mattia Rollo</span>
-                               <span class="last-login">Ultimo Accesso: <span>Oggi</span></span>
+                               <span id="name-user">Ricevi notifiche di nuovi messaggi</span>
+                               <span class="last-login"><a href="#">Attiva notifiche desktop</a></span>
+                            </div>
+                            <div class="d-flex ms-auto">
+                                <i class="fa-solid fa-x text-secondary m-auto"></i>
                             </div>
                         </div>
                         
                     </div>
 
+
                 </div>
+                <!--lato destro con la chat corrente attiva-->
                 <div id="active-chat" class="right h-100 bg-danger position-relative">
+                    <!--intestazione chat attiva con icon-profile/last-access/controls-->
                     <div id="chat-active-header" class="icon-header my-bg-white-header d-flex align-items-center px-2 justify-content-between">
                         <div class="icon-profile d-flex align-content-center">
                             <div id="icon-chat" class="icon-chat">
                                 <img src="img/avatar_1.jpg" class="img-fluid" alt="">
                             </div>
-                            <div id="user-last-login" class="ps-1 d-flex flex-column justify-content-center">
+                            <div id="last-access" class="ps-1 d-flex flex-column justify-content-center">
                                <span id="name-user"class="">Mattia Rollo</span>
-                               <span class="last-login">Ultimo Accesso: <span>Oggi</span></span>
+                               <span class="last-access">Ultimo Accesso: <span>Oggi</span></span>
                             </div>
                         </div>
                         <div id="controls">
