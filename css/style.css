@@ -24,15 +24,19 @@ body {
     height: 100%;
     border-radius: 50%;
 }
+.square {
+    width: 50px;
+    height: 50px;
+}
 #controls i{
     margin: 0 8px;
     font-size: 1.2rem;
     color: grey;
 }
 
-#controls a {
+/* #controls a {
     color: black
-}
+} */
 
 #user-last-login {
     line-height: 1rem;
@@ -53,4 +57,25 @@ body {
     font-size: 1.4rem;
     color: grey;
     cursor: pointer;
+}
+.form-control:focus {
+    box-shadow: 0px 0px 2px rgb(97, 97, 97);
+    border-color: grey;
+}
+.h-70px {
+    height: 70px;
+}
+#allert {
+    background-color: #8edafc;
+    /* height: 70px; */
+}
+#allert i {
+    color: #8edafc;
+}
+/* #icon-bell {
+    height: 70px;
+} */
+
+#notifications span {
+    line-height: 1rem;
 }
