@@ -9,3 +9,11 @@ body {
 .right {
     background-image: url('../img/mine.jpg');
 }
+.icon-profile {
+    height: 80%;
+
+}
+.icon-profile  img{
+    height: 100%;
+    border-radius: 50%;
+}
