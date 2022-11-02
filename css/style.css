@@ -3,6 +3,6 @@ body {
     background-size: 100vw 15vh;
     background-repeat: no-repeat;
 }
-.container {
-    
+.icon-header {
+    height: 60px;
 }
