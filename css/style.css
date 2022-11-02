@@ -43,7 +43,14 @@ body {
 }
 #input-text-chat {
     height: 50px;
+    background-color: #eaeaea;
 }
 #input-text-chat  input{
-    width: 600px;
+    width: 80%;
+}
+#input-text-chat i {
+    padding: 10px;
+    font-size: 1.4rem;
+    color: grey;
+    cursor: pointer;
 }
