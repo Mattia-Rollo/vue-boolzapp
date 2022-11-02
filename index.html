@@ -52,28 +52,46 @@
                         </div>
                         
                     </div>
-
+                    <div class="p-1">
+                        <input type="text" class="form-control" placeholder="cerca tra le chat aperte">
+                    </div>
+                    <ul id="list-chat-opened" class="list-unstyled">
+                        <li>
+                            <div class="icon-profile d-flex align-content-center p-2">
+                                <div id="icon-chat" class="icon-chat h-60px">
+                                    <img src="img/avatar_2.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div id="last-access" class="ps-1 d-flex flex-column justify-content-center">
+                                    <span id="name-user"class="">Giorgio Greco</span>
+                                    <span class="last-access">Ultimo Accesso: <span>Oggi</span></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
 
                 </div>
                 <!--lato destro con la chat corrente attiva-->
                 <div id="active-chat" class="right h-100 bg-danger position-relative">
                     <!--intestazione chat attiva con icon-profile/last-access/controls-->
                     <div id="chat-active-header" class="icon-header my-bg-white-header d-flex align-items-center px-2 justify-content-between">
+                        <!-- parte sinistra con icona e ultimo accesso  -->
                         <div class="icon-profile d-flex align-content-center">
                             <div id="icon-chat" class="icon-chat">
-                                <img src="img/avatar_1.jpg" class="img-fluid" alt="">
+                                <img src="img/avatar_2.jpg" class="img-fluid" alt="">
                             </div>
                             <div id="last-access" class="ps-1 d-flex flex-column justify-content-center">
-                               <span id="name-user"class="">Mattia Rollo</span>
+                               <span id="name-user"class="">Giorgio Greco</span>
                                <span class="last-access">Ultimo Accesso: <span>Oggi</span></span>
                             </div>
                         </div>
+                        <!-- part destra dell'itestrazione con icone search/attached/options -->
                         <div id="controls">
                             <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                             <a href="#"><i class="fa-solid fa-paperclip"></i></a>
                             <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                         </div>
                     </div>
+                    <!-- footer della chat attiva con campo di imput per inviare messaggi -->
                     <div id="input-text-chat" class="position-absolute bottom-0 w-100 d-flex align-items-center justify-content-around">
                         <i class="fa-regular fa-face-smile"></i>
                         <input type="text" class="form-control">    

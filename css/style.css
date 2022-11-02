@@ -28,6 +28,9 @@ body {
     width: 40px;
     height: 40px;
 }
+.h-60px {
+    height: 60px;
+}
 #controls i{
     margin: 0 8px;
     font-size: 1.2rem;
@@ -63,8 +66,8 @@ i {
     margin: 0 auto;
 }
 .form-control:focus {
-    box-shadow: 0px 0px 2px rgb(97, 97, 97);
-    border-color: grey;
+    box-shadow: 0px 0px 2px rgba(167, 167, 167, 0.73);
+    border-color: rgba(134, 134, 134, 0.478);
 }
 .h-70px {
     height: 70px;
@@ -83,4 +86,8 @@ i {
 #notifications span {
     line-height: 1rem;
     font-size: 0.8rem;
+}
+li:hover {
+    background-color: rgba(209, 209, 209, 0.748);
+    cursor: pointer;
 }
