@@ -3,6 +3,9 @@ body {
     background-size: 100vw 15vh;
     background-repeat: no-repeat;
 }
+.my-bg-white-header {
+    background-color: #eaeaea;
+}
 .left{
     width: 300px;
 }
@@ -22,9 +25,11 @@ body {
     border-radius: 50%;
 }
 #controls i{
-    margin: 0 5px;
+    margin: 0 8px;
     font-size: 1.2rem;
+    color: grey;
 }
+
 #controls a {
     color: black
 }
@@ -34,4 +39,11 @@ body {
 }
 #user-last-login span:nth-child(2) {
     color: grey;
+    font-size: 0.8rem;
+}
+#input-text-chat {
+    height: 50px;
+}
+#input-text-chat  input{
+    width: 600px;
 }
