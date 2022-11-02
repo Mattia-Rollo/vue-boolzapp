@@ -5,6 +5,7 @@ body {
 }
 main {
     padding: 10px 70px;
+    
 }
 .my-bg-white-header {
     background-color: #eaeaea;
@@ -95,13 +96,27 @@ li:hover {
     cursor: pointer;
 }
 .send {
-    background-color: green;
+    background-color: #d5f9ba;
     margin-left: auto;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
+    min-height: 50px;
+    min-width: 250px;
 }
 .recived {
     background-color: rgb(255, 255, 255);
     padding: 5px;
-    border-radius: 10px
+    border-radius: 5px;
+    min-height: 50px;
+    min-width: 250px;
+}
+.date-message {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    color: grey;
+    font-size: 0.8rem;
+}
+.date-last-message{
+    font-size: 0.8rem;
 }

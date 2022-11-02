@@ -58,19 +58,27 @@
                         </div>
                         
                     </div>
-                    <div class="p-1">
-                        <input type="text" class="form-control" placeholder="cerca tra le chat aperte">
+                    <!--################## input campo di richerca #################-->
+                    <div class="input-group p-2 mb-1">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" class="form-control" placeholder="cerca tra le chat" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
+                    <!-- lista chat aperte -->
                     <ul id="list-chat-opened" class="list-unstyled">
-                        <li>
-                            <div class="icon-profile d-flex align-content-center p-2">
+                        <!-- chat aperta con ...  -->
+                        <li class="">
+                            <div class="icon-profile d-flex align-content-center p-2 position-relative">
+                                <!-- icona destinatario chat -->
                                 <div id="icon-chat" class="icon-chat h-60px">
                                     <img src="img/avatar_2.jpg" class="img-fluid" alt="">
                                 </div>
-                                <div id="last-access" class="ps-1 d-flex flex-column justify-content-center">
+                                <!-- ultimo messaggio -->
+                                <div id="last-access" class="ps-1 pt-1 d-flex flex-column ">
                                     <span id="name-user"class="">Giorgio Greco</span>
-                                    <span class="last-access">Ultimo Accesso: <span>Oggi</span></span>
+                                    <span class="last-access last-message">Ciao ci vediamo da Mario</span>
                                 </div>
+                                <!-- orario ultimo messaggio  -->
+                                <div class="top-0 ms-auto text-secondary"><span class="date-last-message">12:00</span></div>
                             </div>
                         </li>
                     </ul>
@@ -108,11 +116,15 @@
                     <main >
                         <div class="p-3 d-flex">
                         
-                            <div id="message" class="send">ciao sono un div</div>
+                            <div id="message" class="send position-relative">ciao sono un div
+                                <span class="date-message">12:00</span>
+                            </div>
                         </div>
                         <div class="p-3 d-flex">
                         
-                            <div id="message" class="recived">ciao sono un div</div>
+                            <div id="message" class="recived position-relative"><span>ciao sono un div</span>
+                                <span class="date-message">12:00</span>
+                            </div>
                         </div>
                     </main>
                     <!-- footer della chat attiva con campo di input per inviare messaggi -->
