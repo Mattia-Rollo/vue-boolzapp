@@ -131,7 +131,7 @@
                     <div id="input-text-chat" class="position-absolute bottom-0 w-100 d-flex align-items-center justify-content-around">
                         <i class="fa-regular fa-face-smile"></i>
                         <input @keyup.enter="addMessage(contacts[activeIndex])" type="text" class="form-control" v-model="text">    
-                        <i class="fa-solid fa-paper-plane"></i>
+                        <i class="fa-solid fa-paper-plane" @click="addMessage(contacts[activeIndex])"></i>
                     </div>
                 </div>
             </div>
