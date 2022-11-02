@@ -3,11 +3,14 @@ body {
     background-size: 100vw 15vh;
     background-repeat: no-repeat;
 }
-.icon-header {
-    height: 60px;
+.left{
+    width: 300px;
 }
 .right {
     background-image: url('../img/mine.jpg');
+}
+.icon-header {
+    height: 60px;
 }
 .icon-profile {
     height: 80%;
@@ -16,4 +19,11 @@ body {
 .icon-profile  img{
     height: 100%;
     border-radius: 50%;
+}
+#controls i{
+    margin: 0 5px;
+    font-size: 1.2rem;
+}
+#controls a {
+    color: black
 }
