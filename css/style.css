@@ -8,6 +8,7 @@ body {
 }
 .right {
     background-image: url('../img/mine.jpg');
+    width: calc(100% - 300px);
 }
 .icon-header {
     height: 60px;
@@ -26,4 +27,11 @@ body {
 }
 #controls a {
     color: black
+}
+
+#user-last-login {
+    line-height: 1rem;
+}
+#user-last-login span:nth-child(2) {
+    color: grey;
 }
