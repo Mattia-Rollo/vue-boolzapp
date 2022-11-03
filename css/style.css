@@ -54,6 +54,7 @@ a, a:hover{
 #last-access span:nth-child(2) {
     color: grey;
     font-size: 0.8rem;
+    
 }
 #input-text-chat {
     height: 50px;

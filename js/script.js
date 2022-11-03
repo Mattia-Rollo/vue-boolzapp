@@ -1,5 +1,6 @@
 const contacts = [
     {
+    id: 1,
     name: 'Michele',
     avatar: '_1',
     visible: true,
@@ -22,6 +23,7 @@ const contacts = [
         ],
     },
     {
+    id: 2,
     name: 'Fabio',
     avatar: '_2',
     visible: true,
@@ -44,6 +46,7 @@ const contacts = [
         ],
     },
     {
+    id: 3,
     name: 'Samuele',
     avatar: '_3',
     visible: true,
@@ -66,6 +69,7 @@ const contacts = [
         ],
     },
     {
+    id: 4,
     name: 'Alessandro B.',
     avatar: '_4',
     visible: true,
@@ -83,6 +87,7 @@ const contacts = [
         ],
     },
     {
+    id: 5,
     name: 'Alessandro L.',
     avatar: '_5',
     visible: true,
@@ -100,6 +105,7 @@ const contacts = [
         ],
     },
     {
+    id: 6,
     name: 'Claudia',
     avatar: '_6',
     visible: true,
@@ -122,6 +128,7 @@ const contacts = [
         ],
     },
     {
+    id: 7,
     name: 'Federico',
     avatar: '_7',
     visible: true,
@@ -139,6 +146,7 @@ const contacts = [
         ],
     },
     {
+    id: 8,
     name: 'Davide',
     avatar: '_8',
     visible: true,
@@ -189,8 +197,12 @@ createApp({
            }
     },
     methods: {
+        setChat(id) {
+            this.activeIndex = this.contacts.findIndex((item) => item.id === id)
+        },
         
         addMessage(obj){
+            if(this.text.length > 0){
             obj.messages.push({
             date: this.date,
             message: this.text,
@@ -198,6 +210,8 @@ createApp({
             setTimeout(()=>{
                 
             },3000)   
+            this.text = '';
+            }
         }
     }
 }).mount('#app');
