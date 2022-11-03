@@ -171,13 +171,21 @@ const contacts = [
 ]    
 
 
+const frasi = [
+    'ciao vi vediamo da mario',
+    'che bello vederti',
+    'il cane è andato all\'ospedale'
+]
+
 let DateTime = luxon.DateTime;
+console.log(frasi.length);
 
 const { createApp } = Vue;
 
 createApp({
     data() {
         return{
+            frasi,
             textSearch: '',
             date: DateTime.now().toLocaleString(DateTime.DATETIME_FULL ),
             text: '',
@@ -209,22 +217,24 @@ createApp({
             obj.messages.push({
             date: this.date,
             message: this.text,
-            status: 'received'})
+            status: 'sent'});
+            let numberRand = Math.floor(Math.random() * this.frasi.length) ;
+            console.log(numberRand);
             setTimeout(()=>{
                 obj.messages.push({
                     date: this.date,
-                    message: 'brutto cognome',
-                    status: 'sent'})
+                    message: this.frasi[numberRand],
+                    status: 'received'})
             },2000)   
             this.text = '';
             }
         },
         getLastMessage(obj) {
             const msg = obj.messages.filter((message)=>{
-                return message.status === 'received';
+            return    message.status === 'received';
                 
             })
-            console.log(msg);
+            // console.log(msg);
             return msg[msg.length-1].message;
         }
     }
@@ -236,8 +246,8 @@ const dateL = contacts[0].messages[0].date
 // console.log(DateTime.now());
 
 const newDate = new Date(contacts[0].messages[0].date);
-console.log(newDate);
+// console.log(newDate);
 
 
 const now = DateTime.fromJSDate(newDate);;
-console.log(now);
+// console.log(now);
