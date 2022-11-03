@@ -174,7 +174,14 @@ const contacts = [
 const frasi = [
     'ciao vi vediamo da mario',
     'che bello vederti',
-    'il cane è andato all\'ospedale'
+    'il cane è andato all\'ospedale',
+    'la luna è bella oggi, ma tu di più',
+    'hai detto che oggi si giocara a Rocket League?',
+    'La droga fa male',
+    'Alessandro non ammazzare nessuno, ci penso io',
+    'domani guardo se ho le cose che mi mancano',
+    'possiamo fare la spesa insieme?',
+    'allora vengo io',
 ]
 
 let DateTime = luxon.DateTime;
