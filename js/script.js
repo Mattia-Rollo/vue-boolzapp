@@ -237,12 +237,26 @@ createApp({
             }
         },
         getLastMessage(obj) {
+            //mi ritorna un array con solo i messaggi ricevuti
+            // prendendo solo l'ultimo messaggio di ogni chat
             const msg = obj.messages.filter((message)=>{
+                
             return    message.status === 'received';
                 
             })
-            // console.log(msg);
+            if(msg.length == 0){
+                return
+            }else{
+            console.log(msg);
+            console.log(msg[msg.length-1].message);
+           
             return msg[msg.length-1].message;
+            }
+        },
+        removeMessage(i){
+            console.log(i);
+            this.contacts[this.activeIndex].messages.splice(i,1);
+            // this.contacts[this.activeIndex].messages.splice(i,1);
         }
     }
 }).mount('#app');

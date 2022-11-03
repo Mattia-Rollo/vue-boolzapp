@@ -117,6 +117,16 @@ li:hover {
     max-width: 500px;
     word-break: break-all;
 }
+.message i{
+    position: absolute;
+    top: 5;
+    right: 8px;
+    opacity: 0;
+}
+.message i:hover {
+    opacity: 1;
+    cursor: pointer;
+}
 .send{
     background-color: #d5f9ba;
     margin-left: auto;

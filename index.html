@@ -115,12 +115,14 @@
                         </div>
                     </div>
                     <!--############# messaggi della chat attiva #####################-->
+                    <!-- ciclo for per i messaggi della chat attiva -->
                     <main >
-                        <div v-for="message in contacts[activeIndex].messages" class="p-3 d-flex">
+                        <div v-for="(message,index) in contacts[activeIndex].messages" class="p-3 d-flex">
                         
 
                             <div id="message" :class="message.status === 'sent' ? 'send' : 'received'" class="position-relative message">{{message.message}}
                                 <span class="date-message">{{message.date}}</span>
+                                <i class="fa-solid fa-chevron-down" @click="removeMessage(index)"></i>
                             </div>
                         
                         </div>
