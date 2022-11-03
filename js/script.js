@@ -191,6 +191,7 @@ const frasi = [
 
 var DateTime = luxon.DateTime;
 // console.log(frasi.length);
+const dt = new Date();
 
 const { createApp } = Vue;
 
@@ -199,7 +200,7 @@ createApp({
         return{
             frasi,
             textSearch: '',
-            date: DateTime.now().toLocaleString({ hour: '2-digit',minute:'numeric' }),
+            date: new Date().toLocaleString(),
             text: '',
             activeIndex: 0,
             contacts
@@ -236,6 +237,7 @@ createApp({
             date: this.date,
             message: this.text,
             status: 'sent'});
+            this.date = new Date().toLocaleString();
             let numberRand = Math.floor(Math.random() * this.frasi.length) ;
             // console.log(numberRand);
             setTimeout(()=>{

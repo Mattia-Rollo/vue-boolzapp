@@ -20,6 +20,9 @@ main {
     background-image: url('../img/mine.jpg');
     width: calc(100% - 180px);
 }
+.right #last-access .last-access{
+    line-height: 1rem;
+}
 .icon-header {
     height: 60px;
 }
