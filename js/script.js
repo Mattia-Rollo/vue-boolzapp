@@ -196,7 +196,7 @@ createApp({
         return{
             frasi,
             textSearch: '',
-            date: DateTime.now().toLocaleString(DateTime.DATETIME_FULL ),
+            date: DateTime.now().toLocaleString('it-IT'),
             text: '',
             activeIndex: 0,
             contacts

@@ -49,7 +49,7 @@ a, a:hover{
 }
 
 .last-message {
-    width: 150px;
+    width: 200px;
         /* word-wrap: normal; */
         white-space: nowrap;
         overflow: hidden;
@@ -58,7 +58,8 @@ a, a:hover{
 }
 
 #last-access {
-    line-height: 1rem;
+    line-height: 1.2rem;
+    justify-content: space-evenly;
 }
 #last-access span:nth-child(2) {
     color: grey;
