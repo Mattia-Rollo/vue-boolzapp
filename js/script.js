@@ -113,7 +113,10 @@ const contacts = [
             {
             date: '10/01/2020 15:30:55',
             message: 'Ciao Claudia, hai novità?',
-            status: 'sent'
+            status: 'sent',
+            get provaUno () {
+                return correctDate(this.date);
+            }
             },
             {
             date: '10/01/2020 15:50:00',
@@ -186,7 +189,7 @@ const frasi = [
     'Pare che il gatto della regina Vittoria venisse trattato alla stregua dei reali inglesi e, come tale, accompagnava sempre la regine Vittoria, anche nelle sue cerimonie più importanti.'
 ]
 
-let DateTime = luxon.DateTime;
+var DateTime = luxon.DateTime;
 // console.log(frasi.length);
 
 const { createApp } = Vue;
@@ -196,7 +199,7 @@ createApp({
         return{
             frasi,
             textSearch: '',
-            date: DateTime.now().toLocaleString({...DateTime.DATE_FULL, weekday: 'long' }),
+            date: DateTime.now().toLocaleString({ hour: '2-digit',minute:'numeric' }),
             text: '',
             activeIndex: 0,
             contacts
@@ -219,7 +222,8 @@ createApp({
             }else{
             return msgReceived[msgReceived.length-1].date;
             }
-        }
+        },
+
     },
     methods: {
         setChat(id) {
@@ -269,14 +273,16 @@ createApp({
 }).mount('#app');
 
 
+console.log(contacts[5].messages[0].provaUno);
+// console.log(correctDate(contacts[0].messages[0].date));
 
-console.log(aggiustaData(contacts[0].messages[0].date));
 
 
+const newDate = new Date(correctDate(contacts[0].messages[0].date));
+console.log(newDate);
 
-const newDate = new Date(aggiustaData(contacts[0].messages[0].date));
-// console.log(newDate.toLocaleDateString('it'));
+
 
 
 const FormatedDate = DateTime.fromJSDate(newDate);
-console.log(FormatedDate);
+console.log(FormatedDate.toLocaleString({year:'numeric', month: 'long', day: 'numeric', hour: '2-digit',minute:'numeric' }));

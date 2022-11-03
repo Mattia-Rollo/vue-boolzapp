@@ -43,8 +43,8 @@
                     
                     <!--######## banner attivazione notifiche desktop ##########-->
                     
-                    <div id="allert" class="p-3">
-                        <div class="icon-profile d-flex align-content-center">
+                    <div id="allert" class="py-2 px-3">
+                        <div class="icon-profile d-flex align-content-center h-100">
                             <div id="icon-bell" class="d-flex">
                                 <div class="m-auto rounded-circle bg-light square d-flex">
                                     <span class="m-auto"><i class="fa-solid fa-bell-slash fs-5"></i></span>
@@ -68,7 +68,7 @@
                     <!-- lista chat aperte -->
                     <ul id="list-chat-opened" class="list-unstyled">
                         <!-- chat aperta con ...  -->
-                        <li v-for="(person,index) in filtered"class="" :key="person.id" @click="setChat(person.id)">
+                        <li v-for="(person,index) of filtered"class="" :key="person.id" @click="setChat(person.id)">
                             <div class="icon-profile d-flex align-content-center p-2 position-relative">
                                 <!-- icona destinatario chat opened-->
                                 <div id="icon-chat" class="icon-chat h-60px">
