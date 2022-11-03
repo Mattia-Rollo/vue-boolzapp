@@ -183,7 +183,7 @@ const frasi = [
     'possiamo fare la spesa insieme?',
     'allora vengo io',
     'verso l\'infinito e oltre',
-    'Buzzlightyear a rapporto signore',
+    'Lightyear a rapporto Signore',
     'Il gas costa troppo, userò la corrente',
     'Non cè due senza Pelè',
     'Sembra giusto',
@@ -217,10 +217,10 @@ createApp({
             : this.contacts;
              
            },
-        lastMessage() {
+        lastMessageDate() {
             const msgReceived = this.contacts[this.activeIndex].messages.filter((x) =>{ return x.status === 'received';})
             if(msgReceived.length == 0){
-                return
+                return null;
             }else{
             return msgReceived[msgReceived.length-1].date;
             }
