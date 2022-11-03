@@ -172,23 +172,18 @@ const contacts = [
 
 
 const frasi = [
-    'ciao vi vediamo da mario',
-    'che bello vederti',
-    'il cane è andato all\'ospedale',
+    'Alcuni gatti non amano la solitudine e mostrano segni di ansia da separazione quando allontanati da qualcuno con il quale hanno un forte legame. Se il tuo gatto ti segue quando ti prepari ad uscire, piange o se la prende con gli oggetti dopo che lo hai lasciato da solo a casa, oppure se al tuo ritorno lo trovi sovraeccitato, allora può voler dire che prova tristezza quando lo lasci.',
+    'I gatti sono pulitissimi. Le operazioni di auto-pulizia li aiutano a mantenere pelle e pelo in buona salute, a regolare la temperatura corporea, aumentare la circolazione sanguigna oltre, naturalmente, a rimuovere sporco e peli morti.',
+    'I gatti hanno una piccola ghiandola posta sotto al palato, subito dietro gli incisivi superiori, in prossimità del naso. Quando vogliono annusare per bene qualcosa, aprono la bocca e sembrano sorridere.',
     'la luna è bella oggi, ma tu di più',
-    'hai detto che oggi si giocara a Rocket League?',
-    'La droga fa male',
+    'All’età di 1 anno, un gatto raggiunge la maturità equivalente di un teenager di 15-17 anni. I gatti invecchiano di almeno 5 o 6 anni ogni 365 giorni. Ciò significa che esemplari di 11-14 anni sono già anziani, equiparabili a persone di 60-72 anni.',
+    'Il gatto domestico è un piccolo mammifero carnivoro appartenente alla famiglia dei felidi. Dall’indole essenzialmente territoriale e crepuscolare, il gatto è un predatore di piccoli animali, specialmente roditori. Per comunicare utilizza vari vocalizzi, le fusa, le posizioni del corpo e i feromoni',
     'Alessandro non ammazzare nessuno, ci penso io',
-    'domani guardo se ho le cose che mi mancano',
-    'possiamo fare la spesa insieme?',
-    'allora vengo io',
-    'verso l\'infinito e oltre',
-    'Lightyear a rapporto Signore',
-    'Il gas costa troppo, userò la corrente',
-    'Non cè due senza Pelè',
-    'Sembra giusto',
-    'A volte penso che dovrei cambiare paese',
-    'La Terra non è perfettamente rotonda , e tipo un geoide. Con il termine geoide si indica la superficie equipotenziale del campo gravitazionale terrestre, che coincide con il livello medio del mare; si ottiene considerando una superficie sempre perpendicolare a un filo a piombo, cioè alla direzione della forza di gravità.'
+    'Sapevi che i gatti possono ruotare le orecchie di 180 gradi per localizzare al meglio i suoni? E non solo, perché la forma conica delle loro orecchie consente loro addirittura di amplificare i rumori. Ciò spiega perché il gatto medio sente 5 volte meglio di un essere umano adulto.',
+    'Diversamente da quanto si pensi, quando un gatto miagola lo fa per comunicare con gli umani, non con i suoi simili. Se il tuo gatto miagola con te, lo fa probabilmente per attirare la tua attenzione. E per ogni essere umano ha un tipo di miagolio diverso!',
+    'La Terra non è perfettamente rotonda , e tipo un geoide. Con il termine geoide si indica la superficie equipotenziale del campo gravitazionale terrestre, che coincide con il livello medio del mare; si ottiene considerando una superficie sempre perpendicolare a un filo a piombo, cioè alla direzione della forza di gravità.',
+    'Il primo gatto di cui si conosca l’identità ha origini antichissime e più che un felino è una divinità: si tratta della dea Bastet, venerata dagli antichi egizi già a partire dalla seconda dinastia (2890 a.C.) e poi diventata Ailuros nella mitologia greca.',
+    'Pare che il gatto della regina Vittoria venisse trattato alla stregua dei reali inglesi e, come tale, accompagnava sempre la regine Vittoria, anche nelle sue cerimonie più importanti.'
 ]
 
 let DateTime = luxon.DateTime;
