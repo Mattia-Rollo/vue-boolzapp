@@ -108,22 +108,21 @@ li:hover {
     background-color: rgba(209, 209, 209, 0.748);
     cursor: pointer;
 }
-.received {
-    background-color: #d5f9ba;
-    margin-left: auto;
+.message{
     padding: 5px 10px;
     border-radius: 5px;
     min-height: 50px;
     min-width: 250px;
     max-width: 350px;
 }
+.received {
+    background-color: #d5f9ba;
+    margin-left: auto;
+    
+}
 .send {
     background-color: rgb(255, 255, 255);
-    padding: 5px 10px;
-    border-radius: 5px;
-    min-height: 50px;
-    min-width: 250px;
-    max-width: 350px;
+  
 }
 .date-message {
     position: absolute;
