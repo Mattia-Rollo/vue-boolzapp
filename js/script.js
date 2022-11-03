@@ -182,10 +182,17 @@ const frasi = [
     'domani guardo se ho le cose che mi mancano',
     'possiamo fare la spesa insieme?',
     'allora vengo io',
+    'verso l\'infinito e oltre',
+    'Buzzlightyear a rapporto signore',
+    'Il gas costa troppo, userò la corrente',
+    'Non cè due senza Pelè',
+    'Sembra giusto',
+    'A volte penso che dovrei cambiare paese',
+    'La Terra non è perfettamente rotonda , e tipo un geoide. Con il termine geoide si indica la superficie equipotenziale del campo gravitazionale terrestre, che coincide con il livello medio del mare; si ottiene considerando una superficie sempre perpendicolare a un filo a piombo, cioè alla direzione della forza di gravità.'
 ]
 
 let DateTime = luxon.DateTime;
-console.log(frasi.length);
+// console.log(frasi.length);
 
 const { createApp } = Vue;
 
@@ -231,7 +238,7 @@ createApp({
             message: this.text,
             status: 'sent'});
             let numberRand = Math.floor(Math.random() * this.frasi.length) ;
-            console.log(numberRand);
+            // console.log(numberRand);
             setTimeout(()=>{
                 obj.messages.push({
                     date: this.date,
@@ -252,14 +259,14 @@ createApp({
             if(msg.length == 0){
                 return
             }else{
-            console.log(msg);
-            console.log(msg[msg.length-1].message);
+            // console.log(msg);
+            // console.log(msg[msg.length-1].message);
            
             return msg[msg.length-1].message;
             }
         },
         removeMessage(i){
-            console.log(i);
+            // console.log(i);
             this.contacts[this.activeIndex].messages.splice(i,1);
             // this.contacts[this.activeIndex].messages.splice(i,1);
         }
