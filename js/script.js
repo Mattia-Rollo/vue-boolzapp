@@ -196,7 +196,7 @@ createApp({
         return{
             frasi,
             textSearch: '',
-            date: DateTime.now().toLocaleString('it-IT'),
+            date: DateTime.now().toLocaleString({...DateTime.DATE_FULL, weekday: 'long' }),
             text: '',
             activeIndex: 0,
             contacts
@@ -270,12 +270,13 @@ createApp({
 
 
 
-// const dateL = contacts[0].messages[0].date
-// console.log(DateTime.now());
-
-const newDate = new Date.parse(contacts[0].messages[0].date).toLocaleString('it');
-console.log(newDate);
+console.log(aggiustaData(contacts[0].messages[0].date));
 
 
-const now = DateTime.fromJSDate(newDate);
-console.log(now);
+
+const newDate = new Date(aggiustaData(contacts[0].messages[0].date));
+// console.log(newDate.toLocaleDateString('it'));
+
+
+const FormatedDate = DateTime.fromJSDate(newDate);
+console.log(FormatedDate);
