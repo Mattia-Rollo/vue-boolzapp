@@ -194,7 +194,10 @@ createApp({
             ? this.contacts.filter((obj) => obj.name.toLowerCase().includes(this.textSearch.toLowerCase()))
             : this.contacts;
              
-           }
+           },
+        lastMessage() {
+
+        }
     },
     methods: {
         setChat(id) {
@@ -215,6 +218,14 @@ createApp({
             },2000)   
             this.text = '';
             }
+        },
+        getLastMessage(obj) {
+            const msg = obj.messages.filter((message)=>{
+                return message.status === 'received';
+                
+            })
+            console.log(msg);
+            return msg[msg.length-1].message;
         }
     }
 }).mount('#app');

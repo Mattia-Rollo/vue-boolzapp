@@ -116,12 +116,12 @@ li:hover {
     min-width: 250px;
     max-width: 350px;
 }
-.received {
+.received{
     background-color: #d5f9ba;
     margin-left: auto;
     
 }
-.send {
+.send  {
     background-color: rgb(255, 255, 255);
   
 }
