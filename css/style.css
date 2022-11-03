@@ -74,7 +74,7 @@ main {
     background-color: #eaeaea;
 }
 #input-text-chat  input{
-    width: 80%;
+    
 }
 i {
     cursor: pointer;
@@ -87,9 +87,11 @@ i {
     margin: 0 auto;
     transition: all 0.2s;
     border-radius: 15px;
+    width: 70px;
+    text-align: center;
 }
 #input-text-chat i:active{
-    background-color: #8f8f8f64;
+    /* background-color: #8f8f8f64; */
     color: white;
 }
 .form-control:focus {
