@@ -211,7 +211,12 @@ createApp({
              
            },
         lastMessage() {
-
+            const msgReceived = this.contacts[this.activeIndex].messages.filter((x) =>{ return x.status === 'received';})
+            if(msgReceived.length == 0){
+                return
+            }else{
+            return msgReceived[msgReceived.length-1].date;
+            }
         }
     },
     methods: {
