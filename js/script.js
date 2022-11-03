@@ -6,7 +6,7 @@ const contacts = [
     visible: true,
     messages: [
             {
-            date: '202/01/10 15:30:55',
+            date: '10/01/2022 15:30:55',
             message: 'Hai portato a spasso il cane?',
             status: 'sent'
             },
@@ -270,12 +270,12 @@ createApp({
 
 
 
-const dateL = contacts[0].messages[0].date
+// const dateL = contacts[0].messages[0].date
 // console.log(DateTime.now());
 
-const newDate = new Date(contacts[0].messages[0].date);
-// console.log(newDate);
+const newDate = new Date.parse(contacts[0].messages[0].date).toLocaleString('it');
+console.log(newDate);
 
 
-const now = DateTime.fromJSDate(newDate);;
-// console.log(now);
+const now = DateTime.fromJSDate(newDate);
+console.log(now);

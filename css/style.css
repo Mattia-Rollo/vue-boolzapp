@@ -58,8 +58,8 @@ a, a:hover{
 }
 
 #last-access {
-    line-height: 1.2rem;
-    justify-content: space-evenly;
+    line-height: 1.6rem;
+    
 }
 #last-access span:nth-child(2) {
     color: grey;
