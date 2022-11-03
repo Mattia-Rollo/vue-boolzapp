@@ -208,8 +208,11 @@ createApp({
             message: this.text,
             status: 'received'})
             setTimeout(()=>{
-                
-            },3000)   
+                obj.messages.push({
+                    date: this.date,
+                    message: 'brutto cognome',
+                    status: 'sent'})
+            },2000)   
             this.text = '';
             }
         }

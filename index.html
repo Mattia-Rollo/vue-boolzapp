@@ -62,7 +62,7 @@
                     <!--################## input campo di richerca #################-->
                     <div class="input-group p-2 mb-1">
                         <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                        <input type="text" class="form-control" placeholder="cerca tra le chat" aria-label="Username" aria-describedby="basic-addon1" v-model="textSearch">
+                        <input type="text" class="form-control" placeholder="cerca tra le chat" aria-label="Username" aria-describedby="basic-addon1" v-model.trim="textSearch">
                     </div>
                     <!-- lista chat aperte -->
                     <ul id="list-chat-opened" class="list-unstyled">
@@ -130,7 +130,7 @@
                     
                     <div id="input-text-chat" class="position-absolute bottom-0 w-100 d-flex align-items-center justify-content-around">
                         <i class="fa-regular fa-face-smile"></i>
-                        <input @keyup.enter="addMessage(contacts[activeIndex])" type="text" class="form-control" v-model="text">    
+                        <input @keyup.enter="addMessage(contacts[activeIndex])" type="text" class="form-control" v-model.trim="text">    
                         <i class="fa-solid fa-paper-plane" @click="addMessage(contacts[activeIndex])"></i>
                     </div>
                 </div>
