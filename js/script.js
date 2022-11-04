@@ -229,7 +229,8 @@ createApp({
 
     },
     methods: {
-        onBeforeEnter(el) {
+            onBeforeEnter(el) {
+        
             el.style.opacity = 0
             el.style.height = 0
           },
@@ -237,7 +238,7 @@ createApp({
             gsap.to(el, {
               opacity: 1,
               height: 80,
-              delay: el.dataset.index * 0.15,
+              delay: el.dataset.index * 0.10,
               onComplete: done
             })
           },
@@ -245,7 +246,7 @@ createApp({
             gsap.to(el, {
               opacity: 0,
               height: 0,
-              delay: el.dataset.index * 0.15,
+              delay: el.dataset.index * 0.10,
               onComplete: done
             })
           },

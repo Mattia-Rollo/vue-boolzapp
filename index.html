@@ -75,7 +75,7 @@
                         @before-enter="onBeforeEnter"
                         @enter="onEnter"
                         @leave="onLeave">
-                        <li v-for="(person,index) of filtered"class="" :key="person" :data-index="index" @click="setChat(person.id)" :class="{'active': person.id === idActive}">
+                        <li v-for="(person,index) of filtered"class="position-relative" :key="person" :data-index="index" @click="setChat(person.id)" :class="{'active': person.id === idActive}">
                             <div class="icon-profile d-flex align-content-center p-2 position-relative">
                                 <!-- icona destinatario chat opened-->
                                 <div id="icon-chat" class="icon-chat h-60px">
