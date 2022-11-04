@@ -239,6 +239,8 @@ li:hover:not(.active) {
 /* .dark .message{
     filter: invert(100%);
 } */
+
+
 .dark {
     
     background-image: linear-gradient(#263b3b, #263b3b);
@@ -293,3 +295,22 @@ li:hover:not(.active) {
 .dark .left {
     background-color: black;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
