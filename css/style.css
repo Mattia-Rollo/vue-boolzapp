@@ -172,3 +172,6 @@ li:hover {
     top: 5px;
     right: 5px;
 }
+.active {
+    background-color: aquamarine;
+}
