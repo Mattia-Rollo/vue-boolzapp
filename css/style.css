@@ -1,7 +1,27 @@
+:root {
+    --bg-img: 0,148,133;
+    --body-decor-img: rgb(0, 148, 133);
+    --body-color: rgb(255, 255, 255);
+    --header-footer: #eaeaea;  
+    --primary-text-color: black;
+    --secondary-text-color: grey;
+    --bg-allert: #8edafc;
+    --hover-light-grey: rgba(209, 209, 209, 0.41);
+    --massege-sent: #d5f9ba;
+    --message-received: white;
+    --active-chat: #c9c9c9;
+    --border-input-focus: #8686867a;
+    --shadow-input: rgb(119, 119, 119);
+    --shadow-input-rgb: 119,119,119;
+}
+
+
 body {
-    background-image: linear-gradient(#009688,#009688);
+    background-color: var(--body-color);
+    background-image: linear-gradient(rgba(var(--bg-img),1),rgba(var(--bg-img),1));
     background-size: 100vw 15vh;
     background-repeat: no-repeat;
+    color: var(--primary-text-color);
 }
 main {
     padding: 10px 70px;
@@ -9,9 +29,7 @@ main {
     height: calc(100% - 110px);
     
 }
-.my-bg-white-header {
-    background-color: #eaeaea;
-}
+
 .left{
     width: 400px;
     
@@ -22,6 +40,9 @@ main {
 }
 .right #last-access .last-access{
     line-height: 1rem;
+}
+.header{
+    background-color: var(--header-footer);
 }
 .icon-header {
     height: 60px;
@@ -44,7 +65,7 @@ main {
 #controls i{
     margin: 0 8px;
     font-size: 1.2rem;
-    color: grey;
+    color: var(--secondary-text-color);
 }
 
 /* a, a:hover{
@@ -71,7 +92,7 @@ main {
 }
 #input-text-chat {
     height: 50px;
-    background-color: #eaeaea;
+    background-color: var(--header-footer);
 }
 #input-text-chat  input{
     
@@ -82,7 +103,7 @@ i {
 #input-text-chat i {
     padding: 10px;
     font-size: 1.4rem;
-    color: grey;
+    color: var(--secondary-text-color);
     cursor: pointer;
     margin: 0 auto;
     border-radius: 15px;
@@ -92,24 +113,24 @@ i {
     z-index: 5;
 }
 #input-text-chat i:active{
-    background-color: #8f8f8f64;
-    box-shadow: 0px 0px 5px 2px rgb(86, 86, 86);
-    color: white;
+    background-color: var(--secondary-text-color);
+    box-shadow: 0px 0px 15px 10px rgb(var(--secondary-text-color));
+    color: var(--header-footer);
     font-size: 1.8rem;
 }
 .form-control:focus {
-    box-shadow: 0px 0px 2px rgba(167, 167, 167, 0.73);
-    border-color: rgba(134, 134, 134, 0.478);
+    box-shadow: 0px 0px 5px rgba(var(--shadow-input-rgb),1);
+    border-color: var(--border-input-focus);
 }
 .h-70px {
     height: 70px;
 }
 #allert {
-    background-color: #8edafc;
+    background-color: var(--bg-allert);
     height: 70px;
 }
 #allert i {
-    color: #8edafc;
+    color: var(--bg-allert);
 }
 /* #icon-bell {
     height: 70px;
@@ -128,7 +149,7 @@ li{
     height: 80px;
 }
 li:hover:not(.active) {
-    background-color: rgba(209, 209, 209, 0.41);
+    background-color: var(--hover-light-grey);
     cursor: pointer;
 }
 .message{
@@ -151,19 +172,19 @@ li:hover:not(.active) {
     cursor: pointer;
 }
 .send{
-    background-color: #d5f9ba;
+    background-color: var(--massege-sent);
     margin-left: auto;
     
 }
 .received {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--message-received);
   
 }
 .date-message {
     position: absolute;
     right: 5px;
     bottom: 0;
-    color: grey;
+    color: var(--secondary-text-color);
     font-size: 0.8rem;
 }
 .date-last-message{
@@ -178,7 +199,7 @@ li:hover:not(.active) {
     right: 5px;
 }
 .active {
-    background-color: rgb(201, 201, 201);
+    background-color: var(--active-chat);
 }
 .list-move,
 .list-enter-active,
