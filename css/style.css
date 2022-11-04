@@ -123,8 +123,11 @@ i {
     height: calc(100% - 190px);
     overflow-y: scroll;
 }
-li:hover {
-    background-color: rgba(209, 209, 209, 0.748);
+li{
+    cursor: pointer;
+}
+li:hover:not(.active) {
+    background-color: rgba(209, 209, 209, 0.41);
     cursor: pointer;
 }
 .message{
@@ -173,5 +176,5 @@ li:hover {
     right: 5px;
 }
 .active {
-    background-color: aquamarine;
+    background-color: rgb(201, 201, 201);
 }
