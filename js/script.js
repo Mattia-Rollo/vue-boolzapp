@@ -200,6 +200,7 @@ createApp({
         return{
             frasi,
             textSearch: '',
+            idActive: 1,
             date: dt.now().toLocaleString({year:'numeric', month: 'long', day: 'numeric', hour: '2-digit',minute:'numeric',second:'numeric' }),
             text: '',
             activeIndex: 0,
@@ -229,6 +230,7 @@ createApp({
     methods: {
         setChat(id) {
             this.activeIndex = this.contacts.findIndex((item) => item.id === id)
+            this.idActive = id;
         },
         
         addMessage(obj){

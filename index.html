@@ -68,7 +68,7 @@
                     <!-- lista chat aperte -->
                     <ul id="list-chat-opened" class="list-unstyled">
                         <!-- chat aperta con ...  -->
-                        <li v-for="(person,index) of filtered"class="" :key="person.id" @click="setChat(person.id)">
+                        <li v-for="(person,index) of filtered"class="" :key="person.id" @click="setChat(person.id)" :class="{'active': person.id === idActive}">
                             <div class="icon-profile d-flex align-content-center p-2 position-relative">
                                 <!-- icona destinatario chat opened-->
                                 <div id="icon-chat" class="icon-chat h-60px">
