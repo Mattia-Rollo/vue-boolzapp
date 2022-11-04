@@ -199,6 +199,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return{
+            light:true,
+            dark: false,
             frasi,
             textSearch: '',
             idActive: 1,

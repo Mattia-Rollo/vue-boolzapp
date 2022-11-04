@@ -16,7 +16,8 @@
 </head>
 <body>
     <div id="app">
-        <div class="container-lg vh-100 p-3">
+        <div class="wrapper" :class="{'dark': dark}">
+        <div class="container-fluid vh-100 p-3">
             <div class="container-lg h-100 d-flex p-3">
 
 <!--############ Lato sinistro lista chat aperte ############################-->
@@ -25,7 +26,7 @@
                     
                     <!--#####icona profilo utente e controlli status/new chat/options ########-->
                     
-                    <div id="header-aside-left" class="header icon-header d-flex justify-content-between align-items-center p-1">
+                    <div id="header-aside-left" class="header icon-header d-flex justify-content-between align-items-center p-1" :class="{'dark-header': dark}">
                         <div class="icon-profile d-flex align-content-center">
                             <div class="icon-user">
                                 <img src="img/avatar_1.jpg" class="img-fluid" alt="">
@@ -35,10 +36,10 @@
                             </div>
                         </div>
 
-                        <div id="controls">
-                            <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
-                            <a href="#"><i class="fa-solid fa-message"></i></a>
-                            <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        <div id="controls" :class="{'dark-ico': dark, 'light-ico': light}">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
 
                     </div>
@@ -74,7 +75,7 @@
                     <transition-group name="list" tag="ul" id="list-chat-opened" class="list-unstyled" :css="false"
                         @before-enter="onBeforeEnter"
                         @enter="onEnter"
-                        @leave="onLeave">
+                        @leave="onLeave" :class="{'dark-list': dark}">
                         <li v-for="(person,index) of filtered"class="position-relative" :key="person" :data-index="index" @click="setChat(person.id)" :class="{'active': person.id === idActive}">
                             <div class="icon-profile d-flex align-content-center p-2 position-relative">
                                 <!-- icona destinatario chat opened-->
@@ -101,11 +102,11 @@
                     
                     <!--intestazione chat attiva con icon-profile/last-access/controls-->
                     
-                    <div id="chat-active" class="header icon-header d-flex align-items-center p-1 justify-content-between">
+                    <div id="chat-active" class="header icon-header d-flex align-items-center p-1 justify-content-between" :class="{'dark-header': dark}">
                         
                         <!-- parte sinistra con icona e ultimo accesso  -->
                         
-                        <div class="icon-profile d-flex align-content-center">
+                        <div class="icon-profile d-flex align-content-center " >
                             <div id="icon-chat" class="icon-chat">
                                 <img :src="`img/avatar${contacts[activeIndex].avatar}.jpg`" class="img-fluid" alt="">
                             </div>
@@ -117,11 +118,12 @@
                         
                         <!-- part destra dell'itestrazione con icone search/attached/options -->
                         
-                        <div id="controls">
-                            <i class="fa-solid fa-moon"></i>
-                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                            <a href="#"><i class="fa-solid fa-paperclip"></i></a>
-                            <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        <div id="controls" :class="{'light-ico':  light}">
+                            <i @click="dark = !dark, light = !light" v-if='dark'class="fa-solid fa-sun"></i>
+                            <i @click="dark = !dark, light = !light" v-else class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
                     <!--############# messaggi della chat attiva #####################-->
@@ -140,7 +142,7 @@
                     </main>
                     <!-- footer della chat attiva con campo di input per inviare messaggi -->
                     
-                    <div id="input-text-chat" class="position-absolute bottom-0 w-100 d-flex align-items-center justify-content-around">
+                    <div id="input-text-chat" class="header position-absolute bottom-0 w-100 d-flex align-items-center justify-content-around" :class="{'dark-header': dark,'light-ico':  light}" >
                         <i class="fa-regular fa-face-smile"></i>
                         <input @keyup.enter="addMessage(contacts[activeIndex])" type="text" class="form-control" v-model.trim="text">    
                         <i v-if="text" class="fa-solid fa-paper-plane" @click="addMessage(contacts[activeIndex])"></i>
@@ -149,6 +151,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <script src="js/script.js"></script>
 </body>
