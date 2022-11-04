@@ -71,11 +71,11 @@
                     <!-- chat aperta con ...  -->
 <!--################################################################################################################################################################################################################################################-->
 <!--################### prova della transition con vue e una libreria gsap  ###########################################################################################################################################################################################################################################à###############################               -->
-                    <TransitionGroup name="list" tag="ul" id="list-chat-opened" class="list-unstyled" :css="false"
+                    <transition-group name="list" tag="ul" id="list-chat-opened" class="list-unstyled" :css="false"
                         @before-enter="onBeforeEnter"
                         @enter="onEnter"
                         @leave="onLeave">
-                        <li v-for="(person,index) of filtered"class="" :key="person.id" :data-index="index" @click="setChat(person.id)" :class="{'active': person.id === idActive}">
+                        <li v-for="(person,index) of filtered"class="" :key="person" :data-index="index" @click="setChat(person.id)" :class="{'active': person.id === idActive}">
                             <div class="icon-profile d-flex align-content-center p-2 position-relative">
                                 <!-- icona destinatario chat opened-->
                                 <div id="icon-chat" class="icon-chat h-60px">
@@ -90,7 +90,7 @@
                                 <div id="date-last-msg" class="position-absolute ms-auto text-secondary text-end "><span class="date-last-message">{{person.messages[person.messages.length-1].date}}</span></div>
                             </div>
                         </li>
-                    </TransitionGroup>
+                    </transition-group>
                     
 
                 </div>
