@@ -4,7 +4,7 @@
     --body-color: rgb(255, 255, 255);
     --header-footer: #eaeaea;  
     --primary-text-color: black;
-    --secondary-text-color: grey;
+    --secondary-icon-color: grey;
     --secondary: grey;
     --bg-allert: #8edafc;
     --hover-light-grey: rgba(209, 209, 209, 0.41);
@@ -121,8 +121,8 @@ i {
     z-index: 5;
 }
 #input-text-chat i:active{
-    background-color: var(--secondary-text-color);
-    box-shadow: 0px 0px 15px 10px rgb(var(--secondary-text-color));
+    background-color: var(--secondary-icon-color);
+    box-shadow: 0px 0px 15px 10px rgb(var(--secondary-icon-color));
     color: var(--header-footer);
     font-size: 1.8rem;
 }
@@ -192,7 +192,7 @@ li:hover:not(.active) {
     position: absolute;
     right: 5px;
     bottom: 0;
-    color: var(--secondary-text-color);
+    color: var(--secondary);
     font-size: 0.8rem;
 }
 .date-last-message{
@@ -247,6 +247,7 @@ li:hover:not(.active) {
     background-color: rgb(87, 87, 87);
     color: white;
     scrollbar-color: dark;
+    --secondary: white;
 } 
  .dark-header {
     background-color: rgb(57, 57, 57);
@@ -255,7 +256,7 @@ li:hover:not(.active) {
     color: white;
 }
 .light-ico {
-    color: var(--secondary-text-color)
+    color: var(--secondary-icon-color)
 }
 
 .dark-list {
@@ -280,6 +281,15 @@ li:hover:not(.active) {
     color: white;
 }
 .dark .send {
-    background-color: #517435;
+    background-color: #311567;
     color: white;
+}
+.dark .active {
+    background-color: rgba(0, 0, 0, 0.559);
+}
+.dark .text-secondary{
+    color: white!important;
+}
+.dark .left {
+    background-color: black;
 }
