@@ -68,9 +68,10 @@
                         <input type="text" class="form-control" placeholder="cerca tra le chat" aria-label="Username" aria-describedby="basic-addon1" v-model.trim="textSearch">
                     </div>
                     <!-- lista chat aperte -->
-                    
-                        <!-- chat aperta con ...  -->
-                        <TransitionGroup name="list" tag="ul" id="list-chat-opened" class="list-unstyled" :css="false"
+                    <!-- chat aperta con ...  -->
+<!-################################################################################################################################################################################################################################################-->
+<!--################### prova della transition con vue e una libreria gsap  ###########################################################################################################################################################################################################################################à###############################               -->
+                    <TransitionGroup name="list" tag="ul" id="list-chat-opened" class="list-unstyled" :css="false"
                         @before-enter="onBeforeEnter"
                         @enter="onEnter"
                         @leave="onLeave">
