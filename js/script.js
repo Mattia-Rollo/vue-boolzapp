@@ -228,10 +228,22 @@ createApp({
 
     },
     methods: {
-        onEnter(el, done) {
+        onBeforeEnter(el) {
+            el.style.opacity = 0
+            el.style.height = 0
+          },
+          onEnter(el, done) {
             gsap.to(el, {
               opacity: 1,
               height: '1.6em',
+              delay: el.dataset.index * 0.15,
+              onComplete: done
+            })
+          },
+          onLeave(el, done) {
+            gsap.to(el, {
+              opacity: 0,
+              height: 0,
               delay: el.dataset.index * 0.15,
               onComplete: done
             })
