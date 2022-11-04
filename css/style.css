@@ -27,7 +27,7 @@ main {
     height: 60px;
 }
 .icon-profile {
-    height: 80%;
+    height: 100%;
 
 }
 .icon-profile  img{
@@ -125,6 +125,7 @@ i {
 }
 li{
     cursor: pointer;
+    height: 80px;
 }
 li:hover:not(.active) {
     background-color: rgba(209, 209, 209, 0.41);
@@ -167,12 +168,13 @@ li:hover:not(.active) {
 }
 .date-last-message{
     font-size: 0.8rem;
+    line-height: 1.6rem
 }
 .input-group {
     height: 50px;
 }
 #date-last-msg {
-    top: 5px;
+    /* top: 5px; */
     right: 5px;
 }
 .active {
@@ -190,4 +192,4 @@ li:hover:not(.active) {
 }
 .list-leave-active {
     position: absolute;
-  }
+}
