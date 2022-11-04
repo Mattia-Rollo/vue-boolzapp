@@ -237,7 +237,7 @@ createApp({
             date: this.date,
             message: this.text,
             status: 'sent'});
-            this.date = dt.now().toLocaleString({year:'numeric', month: 'long', day: 'numeric', hour: '2-digit',minute:'numeric',second:'numeric' });
+            this.date = dt.now().toLocaleString({year:'numeric', month: 'long', day: 'numeric', hour: '2-digit',minute:'numeric' });
             let numberRand = Math.floor(Math.random() * this.frasi.length) ;
             // console.log(numberRand);
             setTimeout(()=>{
