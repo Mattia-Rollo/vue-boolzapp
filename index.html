@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.41/dist/vue.global.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.1.0/build/global/luxon.min.js"></script>
     <script src="js/libreria.js"></script>
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Boolzap</title>
 </head>
@@ -22,7 +23,7 @@
 
 <!--############ Lato sinistro lista chat aperte ############################-->
                 
-                <div class="left h-100 border-end">
+                <div class="left h-100 border-end border-dark">
                     
                     <!--#####icona profilo utente e controlli status/new chat/options ########-->
                     
@@ -151,8 +152,17 @@
                 </div>
             </div>
         </div>
+        
+        <teleport to="body">
+            <!-- use the modal component, pass in the prop -->
+            <modal :show="showModal" @close="showModal = false">
+              <template #header>
+                <h2>Benvenuto su Boolzapp</h2>
+              </template>
+            </modal>
+          </teleport>
     </div>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>

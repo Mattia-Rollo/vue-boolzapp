@@ -194,11 +194,15 @@ var DateTime = luxon.DateTime;
 const dt = DateTime;
 
 const { createApp } = Vue;
-
+import Modal from './Modal.js'
 
 createApp({
+    components: {
+        Modal
+      },
     data() {
         return{
+            showModal: true,
             light:true,
             dark: false,
             frasi,
