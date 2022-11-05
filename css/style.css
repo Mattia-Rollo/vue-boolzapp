@@ -149,8 +149,11 @@ i {
     font-size: 0.8rem;
 }
 #list-chat-opened {
-    height: calc(100% - 190px);
+    height: calc(100% - 185px);
     overflow-y: scroll;
+}
+ul {
+    margin: 0;
 }
 li{
     cursor: pointer;
