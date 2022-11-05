@@ -310,11 +310,11 @@ li:hover:not(.active) {
     color: white;
 }
 .dark #allert {
-    background-color: #263b3b;
+    background-color: #252525;
     filter: grayscale(0.2);
 }
 .dark #allert i{
-    color: #263b3b;
+    color: #262626;
     
 }
 /* width */

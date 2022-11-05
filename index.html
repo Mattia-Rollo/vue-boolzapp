@@ -89,7 +89,7 @@
                                     <span class="last-message">{{getLastMessage(person)}}</span>
                                 </div>
                                 <!-- orario ultimo messaggio  -->
-                                <div id="date-last-msg" class="position-absolute ms-auto text-secondary text-end "><span class="date-last-message">{{person.messages[person.messages.length-1].date}}</span></div>
+                                <div id="date-last-msg" class="position-absolute ms-auto text-secondary text-end "><span class="date-last-message">{{lastMessageDate(person)}}</span></div>
                             </div>
                         </li>
                     </transition-group>
@@ -113,7 +113,7 @@
                             </div>
                             <div id="last-access" class="ps-1 d-flex flex-column justify-content-center">
                                <span id="name-user"class="">{{contacts[activeIndex].name}}</span>
-                               <span class="last-access">Ultimo Accesso: <span>{{lastMessageDate}}</span></span>
+                               <span class="last-access">Ultimo Accesso: <span>{{lastMessageDate(contacts[activeIndex])}}</span></span>
                             </div>
                         </div>
                         
@@ -126,8 +126,8 @@
                             <i class="fa-solid fa-paperclip"></i>
                             <i class="fa-solid fa-ellipsis-vertical" @click.stop="show = !show, indexMsgActive = null" ></i>
                             <ul class="dropdown-menu top-50px"  :class="{'show': show && indexMsgActive == null}">
-                                <li><a class="dropdown-item" href="#" @click="">Cancella i messagi</a></li>
-                                <li><a class="dropdown-item" href="#">Cancella la chat</a></li>
+                                <li><a class="dropdown-item" href="#" @click="deleteAllMsg()">Cancella tutti i messagi</a></li>
+                                <li><a class="dropdown-item" href="#" @click="deleteChat(activeIndex)">Cancella la chat</a></li>
                               </ul>
                             
                         </div>

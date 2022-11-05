@@ -211,7 +211,7 @@ createApp({
             frasi,
             textSearch: '',
             idActive: 1,
-            date: dt.now().toLocaleString({year:'numeric', month: 'long', day: 'numeric', hour: '2-digit',minute:'numeric',second:'numeric' }),
+            date: dt.now().toLocaleString({hour: '2-digit',minute:'numeric',second:'numeric' }),
             text: '',
             activeIndex: 0,
             contacts
@@ -227,14 +227,7 @@ createApp({
             : this.contacts;
              
            },
-        lastMessageDate() {
-            const msgReceived = this.contacts[this.activeIndex].messages.filter((x) =>{ return x.status === 'received';})
-            if(msgReceived.length == 0){
-                return null;
-            }else{
-            return msgReceived[msgReceived.length-1].date;
-            }
-        },
+        
 
     },
     methods: {
@@ -269,7 +262,7 @@ createApp({
             date: this.date,
             message: this.text,
             status: 'sent'});
-            this.date = dt.now().toLocaleString({year:'numeric', month: 'long', day: 'numeric', hour: '2-digit',minute:'numeric' });
+            this.date = dt.now().toLocaleString({hour: '2-digit',minute:'numeric',second:'numeric' });
             let numberRand = Math.floor(Math.random() * this.frasi.length) ;
             // console.log(numberRand);
             setTimeout(()=>{
@@ -298,6 +291,14 @@ createApp({
             return msg[msg.length-1].message;
             }
         },
+        lastMessageDate(obj) {
+            const msgReceived = obj.messages.filter((x) =>{ return x.status === 'received';})
+            if(msgReceived.length == 0){
+                return null;
+            }else{
+            return msgReceived[msgReceived.length-1].date;
+            }
+        },
         removeMessage(i){
             // console.log(i);
             this.contacts[this.activeIndex].messages.splice(i,1);
@@ -319,6 +320,12 @@ createApp({
             this.show = false, 
             this.indexMsgActive = null
         },
+        deleteChat(i){
+            this.contacts.splice(i,1);
+        },
+        deleteAllMsg(){
+            this.contacts[this.activeIndex].messages = [];
+        }
         // close (e) {
         //     if (!this.$refs.menu.contains(e.target)) {
         //       this.show = false;
@@ -336,7 +343,7 @@ createApp({
     },
     beforeDestroy () {
         // document.removeEventListener('click',this.close)
-      }
+    }
 
 }).mount('#app');
 
