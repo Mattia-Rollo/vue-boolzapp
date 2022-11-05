@@ -331,6 +331,11 @@ li:hover:not(.active) {
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+  .dropdown-menu li a:active {
+    background-color: rgb(255, 255, 255);
+    color: rgb(156, 39, 39);
+    animation: myMove 0.3s;
+  }
   .dark .dropdown-menu{
 
     background-color: rgb(87, 87, 87);
@@ -342,7 +347,9 @@ li:hover:not(.active) {
   .dark .dropdown-menu li a:active {
     background-color: grey;
   }
-
+  @keyframes mymove {
+    50% {font-size: 40px;}
+  }
   .dark .dropdown-menu li a:hover,
   .dark .dropdown-menu li a:focus{
     color: rgb(158, 0, 0);

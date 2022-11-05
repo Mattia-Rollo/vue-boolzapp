@@ -306,27 +306,32 @@ createApp({
         },
         showMenu(i){
             // this.indexMsgActive = 
-            this.show = !this.show;
+            if(this.show == true && this.indexMsgActive == i){
+                this.show = false;
+                this.indexMsgActive = null;
+            }else{
+            this.show = true;
             this.indexMsgActive = i;
             console.log(i);
+            }
         },
         showReset() {
             this.show = false, 
             this.indexMsgActive = null
         },
-        close (e) {
-            if (!this.$refs.menu.contains(e.target)) {
-              this.show = false;
-            }
-            console.log(this.$refs.menu);
-          }
+        // close (e) {
+        //     if (!this.$refs.menu.contains(e.target)) {
+        //       this.show = false;
+        //     }
+        //     console.log(this.$refs.menu);
+        //   }
 
 
 
     },
     mounted() {
         // console.log(this.$refs.menu);
-        this.$refs.menu[0].addEventListener('click', this.close)
+        // this.$refs.menu[0].addEventListener('click', this.close)
         // console.log(this.$refs.menu);
     },
     beforeDestroy () {

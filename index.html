@@ -23,7 +23,7 @@
 
 <!--############ Lato sinistro lista chat aperte ############################-->
                 
-                <div class="left h-100 border-end border-dark" @click="showReset()">
+                <div class="left h-100 border-end border-dark">
                     
                     <!--#####icona profilo utente e controlli status/new chat/options ########-->
                     
@@ -99,7 +99,7 @@
 
 <!--############ lato destro con la chat corrente attiva ########################-->
                 
-                <div id="active-chat" class="right h-100 bg-danger position-relative"  @click="showReset()">
+                <div id="active-chat" class="right h-100 bg-danger position-relative"  >
                     
                     <!--intestazione chat attiva con icon-profile/last-access/controls-->
                     
@@ -124,8 +124,8 @@
                             <i @click="dark = !dark, light = !light" v-else class="fa-solid fa-moon"></i>
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-ellipsis-vertical" ></i>
-                            <ul class="dropdown-menu top-50px"  v-if="show" :class="{'show': show && indexMsgActive == null}">
+                            <i class="fa-solid fa-ellipsis-vertical" @click.stop="show = !show, indexMsgActive = null" ></i>
+                            <ul class="dropdown-menu top-50px"  :class="{'show': show && indexMsgActive == null}">
                                 <li><a class="dropdown-item" href="#" @click="">Cancella Chat</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -145,7 +145,7 @@
                                 <i class="fa-solid fa-chevron-down" @click.stop="showMenu(index)"></i>
                                 <ul class="dropdown dropdown-menu " ref="menu" :class="(show && index == indexMsgActive) ? 'show' : ''">
                                     <li><a class="dropdown-item" href="#">info</a></li>
-                                    <li><a class="dropdown-item" href="#"  @click="removeMessage(index)">Cancella Messaggio</a></li>
+                                    <li><a class="dropdown-item" href="#"  @click="removeMessage(index)" class="text-danger">Cancella Messaggio</a></li>
                                     
                                   </ul>
                                 
@@ -166,14 +166,14 @@
             </div>
         </div>
         
-        <!-- <teleport to="body"> -->
+        <teleport to="body">
             <!-- use the modal component, pass in the prop -->
-            <!-- <modal :show="showModal" @close="showModal = false">
+            <modal :show="showModal" @close="showModal = false">
               <template #header>
                 <h2>Benvenuto su Boolzapp</h2>
               </template>
             </modal>
-          </teleport> --> 
+          </teleport> 
     </div>
     </div>
     <script src="js/script.js" type="module"></script>
