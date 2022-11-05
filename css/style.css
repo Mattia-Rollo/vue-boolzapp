@@ -185,7 +185,6 @@ li:hover:not(.active) {
 .send{
     background-color: var(--massege-sent);
     margin-left: auto;
-    
 }
 .received {
     background-color: var(--message-received);
@@ -293,13 +292,14 @@ li:hover:not(.active) {
     box-shadow: 0 0px 3px hsl(0, 94%, 32%);
 }
 .dark .active {
-    background-color: rgba(0, 0, 0, 0.559);
+    background-color: #5d4fa1;
+    border-radius: 35px;
 }
 .dark .text-secondary{
     color: rgb(255, 255, 255)!important;
 }
 .dark .left {
-    background-color: rgb(51, 51, 51);
+    background-color: #333333;
 }
 .dark #last-access span:nth-child(2){
     color: white;
@@ -336,6 +336,11 @@ li:hover:not(.active) {
     color: rgb(156, 39, 39);
     animation: myMove 0.3s;
   }
+  .dark li:hover:not(.active) {
+    background-color: #333333;
+    cursor: pointer;
+    
+}
   .dark .dropdown-menu{
 
     background-color: rgb(87, 87, 87);
