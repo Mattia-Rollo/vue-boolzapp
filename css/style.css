@@ -295,10 +295,18 @@ li:hover:not(.active) {
     color: rgb(255, 255, 255)!important;
 }
 .dark .left {
-    background-color: black;
+    background-color: rgb(51, 51, 51);
 }
 .dark #last-access span:nth-child(2){
     color: white;
+}
+.dark #allert {
+    background-color: #263b3b;
+    filter: grayscale(0.2);
+}
+.dark #allert i{
+    color: #263b3b;
+    
 }
 /* width */
 ::-webkit-scrollbar {
