@@ -246,7 +246,7 @@ li:hover:not(.active) {
 
 .dark {
     
-    background-image: linear-gradient(#263b3b, #263b3b);
+    background-image: linear-gradient(#151a1a, #151a1a);
     background-repeat: no-repeat;
     background-size: 100vw 15vh;
     background-color: rgb(87, 87, 87);
