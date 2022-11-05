@@ -202,6 +202,7 @@ createApp({
       },
     data() {
         return{
+            // name: 'dropdown',
             indexMsgActive: null,
             show: false,
             showModal: true,
@@ -305,13 +306,33 @@ createApp({
         },
         showMenu(i){
             // this.indexMsgActive = 
-            this.show = !this.show
+            this.show = !this.show;
             this.indexMsgActive = i;
-        }
+            console.log(i);
+        },
+        showReset() {
+            this.show = false, 
+            this.indexMsgActive = null
+        },
+        close (e) {
+            if (!this.$refs.menu.contains(e.target)) {
+              this.show = false;
+            }
+            console.log(this.$refs.menu);
+          }
+
+
+
     },
     mounted() {
-        console.log(this.$refs.menu);
-    }
+        // console.log(this.$refs.menu);
+        this.$refs.menu[0].addEventListener('click', this.close)
+        // console.log(this.$refs.menu);
+    },
+    beforeDestroy () {
+        // document.removeEventListener('click',this.close)
+      }
+
 }).mount('#app');
 
 
