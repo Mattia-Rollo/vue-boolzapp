@@ -202,6 +202,8 @@ createApp({
       },
     data() {
         return{
+            indexMsgActive: null,
+            show: false,
             showModal: true,
             light:true,
             dark: false,
@@ -236,7 +238,6 @@ createApp({
     },
     methods: {
             onBeforeEnter(el) {
-        
             el.style.opacity = 0
             el.style.height = 0
           },
@@ -299,8 +300,17 @@ createApp({
         removeMessage(i){
             // console.log(i);
             this.contacts[this.activeIndex].messages.splice(i,1);
+            this.show = !this.show
             // this.contacts[this.activeIndex].messages.splice(i,1);
+        },
+        showMenu(i){
+            // this.indexMsgActive = 
+            this.show = !this.show
+            this.indexMsgActive = i;
         }
+    },
+    mounted() {
+        console.log(this.$refs.menu);
     }
 }).mount('#app');
 

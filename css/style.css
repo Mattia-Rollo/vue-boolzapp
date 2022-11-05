@@ -272,7 +272,7 @@ li:hover:not(.active) {
 } */
 .dark .right {
     background-image: url('../img/bgDark.jpg');
-    background-size: 50%
+    background-size: 80%;
 }
 .dark .form-control{
     background-color: rgb(71, 71, 71);
@@ -329,4 +329,36 @@ li:hover:not(.active) {
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
+  }
+  .dark .dropdown-menu{
+
+    background-color: rgb(87, 87, 87);
+    color: white;
+  }
+  .dark .dropdown-menu li a{
+    color: white;
+  }
+  .dark .dropdown-menu li a:active {
+    background-color: grey;
+  }
+
+  .dark .dropdown-menu li a:hover,
+  .dark .dropdown-menu li a:focus{
+    color: rgb(158, 0, 0);
+  }
+  .dropdown-menu {
+    /* display: block; */
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    transform: translateX(57px);
+  }
+  .dropdown-menu li {
+    height: auto;
+  }
+  .show {
+     display: block;
+  }
+  .top-50px {
+    top: 50px!important;
   }
