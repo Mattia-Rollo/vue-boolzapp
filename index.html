@@ -18,12 +18,12 @@
 <body>
     <div id="app">
         <div class="wrapper" :class="{'dark': dark}" @click="showReset()">
-        <div class="container-fluid vh-100 p-3">
-            <div class="container-lg h-100 d-flex p-3">
+        <div class="container-fluid vh-100 p-md-3">
+            <div class=" container-lg h-100 d-flex p-md-3">
 
 <!--############ Lato sinistro lista chat aperte ############################-->
                 
-                <div class="left h-100 border-end border-dark">
+                <div class="left h-100 border-end border-dark d-sm-block" :class="{'d-none': showChat}">
                     
                     <!--#####icona profilo utente e controlli status/new chat/options ########-->
                     
@@ -99,7 +99,7 @@
 
 <!--############ lato destro con la chat corrente attiva ########################-->
                 
-                <div id="active-chat" class="right h-100 bg-danger position-relative"  >
+                <div id="active-chat" class="right h-100 bg-danger position-relative d-sm-block"  :class="{'d-none': !showChat}">
                     
                     <!--intestazione chat attiva con icon-profile/last-access/controls-->
                     
@@ -109,7 +109,7 @@
                         
                         <div class="icon-profile d-flex align-content-center " >
                             <div id="icon-chat" class="icon-chat">
-                                <img :src="`img/avatar${contacts[activeIndex].avatar}.jpg`" class="img-fluid" alt="">
+                                <img :src="`img/avatar${contacts[activeIndex].avatar}.jpg`" alt="">
                             </div>
                             <div id="last-access" class="ps-1 d-flex flex-column justify-content-center">
                                <span id="name-user"class="">{{contacts[activeIndex].name}}</span>
@@ -123,7 +123,7 @@
                             <i @click="dark = !dark, light = !light" v-if='dark'class="fa-solid fa-sun"></i>
                             <i @click="dark = !dark, light = !light" v-else class="fa-solid fa-moon"></i>
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-paperclip" @click="showChat = !showChat"></i>
                             <i class="fa-solid fa-ellipsis-vertical" @click.stop="show = !show, indexMsgActive = null" ></i>
                             <ul class="dropdown-menu top-50px"  :class="{'show': show && indexMsgActive == null}">
                                 <li><a class="dropdown-item" href="#" @click="deleteAllMsg()">Cancella tutti i messagi</a></li>
@@ -132,17 +132,19 @@
                             
                         </div>
                     </div>
-                    <!--############# messaggi della chat attiva #####################-->
+                    <!--############# messaggi della chat attiva indexActive #####################-->
                     <!-- ciclo for per i messaggi della chat attiva -->
                     <main @click="showReset()">
                         <div v-for="(message,index) in contacts[activeIndex].messages" class="p-1 d-flex">
                         
 
-                            <div id="message" :class="message.status === 'sent' ? 'send' : 'received'" class="position-relative message"><span>{{message.message}}</span>
+                            <div id="message" :class="message.status === 'sent' ? 'send' : 'received'" class="position-relative message" @blur="closeDropdown"><span>{{message.message}}</span>
                                 <span class="date-message">{{message.date}}</span>
                                 
-                                <i class="fa-solid fa-chevron-down" @click.stop="showMenu(index)"></i>
-                                <ul class="dropdown dropdown-menu " ref="menu" :class="(show && index == indexMsgActive) ? 'show' : ''">
+                                <i class="fa-solid fa-chevron-down" @click.stop="showMenu(index)" 
+                                 :tabindex="index" ref="spunta"></i>
+                                <ul class="dropdown dropdown-menu " ref="menu" 
+                                :class="(show && index == indexMsgActive) ? 'show' : ''">
                                     <li><a class="dropdown-item" href="#">info</a></li>
                                     <li><a class="dropdown-item" href="#"  @click="removeMessage(index)" class="text-danger">Cancella Messaggio</a></li>
                                     

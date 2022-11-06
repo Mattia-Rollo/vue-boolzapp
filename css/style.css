@@ -284,13 +284,13 @@ li:hover:not(.active) {
 .dark .received {
     background-color: rgb(39, 39, 39);
     color: rgb(255, 255, 255);
-    box-shadow: 0 0 3px #baf3f9;
+    box-shadow: 0 0 5px #baf3f9;
 }
 .dark .send {
     background-color: #5d4fa1;
     /* border: 1px solid #4934ad; */
     color: white;
-    box-shadow: 0 0px 3px hsl(0, 94%, 32%);
+    box-shadow: 0 0px 5px #baf3f9;
 }
 .dark .active {
     background-color: #5d4fa1;
@@ -379,4 +379,14 @@ li:hover:not(.active) {
   }
   .top-50px {
     top: 50px!important;
+  }
+
+  @media only screen and (max-width: 400px) {
+    .right {
+        /* display: none; */
+        width: 100%;
+    }
+    main {
+        padding: 0;
+    }
   }

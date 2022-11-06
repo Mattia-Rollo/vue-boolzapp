@@ -202,6 +202,7 @@ createApp({
       },
     data() {
         return{
+            showChat: false,
             // name: 'dropdown',
             indexMsgActive: null,
             show: false,
@@ -254,6 +255,7 @@ createApp({
         setChat(id) {
             this.activeIndex = this.contacts.findIndex((item) => item.id === id)
             this.idActive = id;
+            this.showChat = !this.showChat
         },
         
         addMessage(obj){
@@ -313,7 +315,7 @@ createApp({
             }else{
             this.show = true;
             this.indexMsgActive = i;
-            console.log(i);
+            // console.log(i);
             }
         },
         showReset() {
@@ -327,7 +329,21 @@ createApp({
         },
         deleteAllMsg(){
             this.contacts[this.activeIndex].messages = [];
-        }
+        },
+        
+
+            handleBlur(e) {
+        
+             console.log('blur', e.target.placeholder)
+        
+            },
+            closeDropdown(){
+                this.show = !this.show
+                this.indexMsgActive = null
+
+            }
+        
+          
         // close (e) {
         //     if (!this.$refs.menu.contains(e.target)) {
         //       this.show = false;
@@ -342,6 +358,13 @@ createApp({
         // console.log(this.$refs.menu);
         // this.$refs.menu[0].addEventListener('click', this.close)
         // console.log(this.$refs.menu);
+        // this.$refs.spunta[0].addEventListener('click', (event) => {
+        //     this.$refs.spunta[0].classList.toggle('show');
+        //   });
+        //   console.log(this.$refs.spunta[0]);
+        //   this.$refs.spunta[0].addEventListener('blur', (event) => {
+        //     this.$refs.spunta[0].classList.remove('show');
+        //   });
     },
     beforeDestroy () {
         // document.removeEventListener('click',this.close)
@@ -350,16 +373,16 @@ createApp({
 }).mount('#app');
 
 
-console.log(contacts[5].messages[0].provaUno);
+// console.log(contacts[5].messages[0].provaUno);
 // console.log(correctDate(contacts[0].messages[0].date));
 
 
 
 const newDate = new Date(correctDate(contacts[0].messages[0].date));
-console.log(newDate);
+// console.log(newDate);
 
 
 
 
 const FormatedDate = DateTime.fromJSDate(newDate);
-console.log(FormatedDate.toLocaleString({year:'numeric', month: 'long', day: 'numeric', hour: '2-digit',minute:'numeric' }));
+// console.log(FormatedDate.toLocaleString({year:'numeric', month: 'long', day: 'numeric', hour: '2-digit',minute:'numeric' }));
