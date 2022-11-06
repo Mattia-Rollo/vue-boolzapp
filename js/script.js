@@ -323,7 +323,7 @@ createApp({
         deleteChat(i){
             this.contacts.splice(i,1);
             this.activeIndex = 0;
-            this.idActive = 1;
+            this.idActive = this.contacts[0].id;
         },
         deleteAllMsg(){
             this.contacts[this.activeIndex].messages = [];
